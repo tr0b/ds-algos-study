@@ -41,4 +41,15 @@ class MyArray {
     delete this.data[this.length-1];
     this.length--;
   }
+  
+  // Create a function that reverses an array
+  reverse() {
+    const reverseArray = new MyArray();
+    for (let i = this.length -1; i >= 0; --i) {
+      reverseArray.push(this.data[i]);
+    }
+
+    this.data = reverseArray.data;
+    return this.data;
+  }
 }
